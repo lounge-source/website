@@ -13,7 +13,7 @@
   position: relative;
   width: 100%;
   min-height: 100vh;
-  background: url(src/assets/images/bar.jpg) no-repeat center center;
+  background: url(../../public/images/bar.jpg) no-repeat center center;
   background-size: cover;
   overflow: hidden;
   padding: 80px;

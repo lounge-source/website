@@ -4,7 +4,7 @@
 
 <template>
 <div>
-  <div>FEAR<span>Lounge</span></div>
+  <div>EFIR<span>Lounge</span></div>
   <nav>
     <ul>
       <li>Instagram</li>

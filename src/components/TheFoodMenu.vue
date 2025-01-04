@@ -1,20 +1,8 @@
 <script setup>
-import { ref, onMounted } from 'vue';
+import { ref } from 'vue';
+import menuDataJson from '@/assets/data.json';
 
-const menuData = ref([]);
-
-onMounted(async () => {
-  try {
-    const response = await fetch('/data.json');
-    if (response.ok) {
-      menuData.value = await response.json();
-    } else {
-      console.error('Ошибка загрузки данных:', response.statusText);
-    }
-  } catch (error) {
-    console.error('Ошибка загрузки данных:', error);
-  }
-});
+const menuData = ref(menuDataJson);
 </script>
 
 <template>
@@ -25,7 +13,7 @@ onMounted(async () => {
           МЕНЮ
         </span>
       </h1>
-      <div class="menu__note">*Количество представленных позиций могут отличаться</div>
+
       <div class="menu__container">
         <div v-for="(section, index) in menuData.menu" :key="index" class="menu__content">
           <div class="content__header">{{ section.category }}</div>
@@ -36,6 +24,7 @@ onMounted(async () => {
                   <div class="content__item">
                     <p class="content__item-title">{{ item.name }}</p>
                     <div class="content__item-dots"></div>
+                    <p class="content__item-size">{{ item.size }} &nbsp;</p>
                     <p class="content__item-price">{{ item.price }} ₽</p>
                   </div>
                   <div class="content__item-description">{{ item.description }}</div>
@@ -45,28 +34,27 @@ onMounted(async () => {
           </div>
         </div>
       </div>
+      <div class="menu__note">*Количество представленных позиций могут отличаться</div>
     </div>
+
   </div>
 </template>
 
 <style scoped>
-/* Контейнер с поддержкой контейнерных запросов */
 .container {
   container-type: inline-size;
 }
 
-/* Базовая стилизация меню */
 .menu {
   width: 100%;
   min-height: 100vh;
-  background: url("src/assets/images/background.png") repeat;
-  font-family: "Roboto", serif;
-  color: #d9d1c9;
-  font-weight: 100;
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding: 30px 150px;
+
+  .menu__container {
+    width: 100%;
+  }
 
   .menu__header {
     color: #9e6850;
@@ -82,7 +70,7 @@ onMounted(async () => {
     line-height: 150%;
     text-transform: uppercase;
     color: #d9d1c9;
-    margin-top: 8px;
+    margin-top: 40px;
   }
 
   .menu__content {
@@ -100,12 +88,6 @@ onMounted(async () => {
       margin-bottom: 60px;
     }
 
-    .two-columns {
-      display: grid;
-      gap: 8px;
-      grid-template-columns: 1fr; /* Одна колонка по умолчанию */
-    }
-
     .content__block-article {
       display: flex;
       flex-direction: column;
@@ -114,14 +96,24 @@ onMounted(async () => {
 
     .content__item {
       display: grid;
-      grid-template-columns: max-content 1fr max-content;
+      grid-template-columns: max-content 1fr 50px 50px;
       align-items: start;
     }
 
     .content__item-title {
-      font-size: 16px;
+      font-size: 14px;
       line-height: 120%;
-      letter-spacing: .32em;
+      letter-spacing: .25em;
+      text-transform: uppercase;
+    }
+
+    @media (min-width:768px) {
+      .content__item-title {
+        font-size: 16px;
+        line-height: 120%;
+        letter-spacing: .25em;
+        text-transform: uppercase;
+      }
     }
 
     .content__item-dots {
@@ -131,17 +123,30 @@ onMounted(async () => {
       line-height: 150%;
     }
 
+    .content__item-size, .content__item-price {
+      text-align: end;
+    }
+
     .content__item-description {
       color: #9e6850;
       margin-top: 8px;
     }
+
+  .two-columns {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-auto-flow: row;
+    grid-column-gap: 170px;
+    -moz-column-gap: 170px;
+    column-gap: 170px;
+  }
+
+    @media (min-width:768px) {
+      .two-columns {
+        grid-template-columns: 1fr 1fr;
+      }
+    }
   }
 }
 
-/* Контейнерные запросы */
-@container (width > 500px) {
-  .two-columns {
-    grid-template-columns: 1fr 1fr; /* Две колонки при ширине > 500px */
-  }
-}
 </style>
