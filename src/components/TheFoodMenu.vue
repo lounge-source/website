@@ -24,7 +24,7 @@ const menuData = ref(menuDataJson);
                   <div class="content__item">
                     <p class="content__item-title">{{ item.name }}</p>
                     <div class="content__item-dots"></div>
-                    <p class="content__item-size">{{ item.size }} &nbsp;</p>
+                    <p class="content__item-size">{{ item.size }}</p>
                     <p class="content__item-price">{{ item.price }} ₽</p>
                   </div>
                   <div class="content__item-description">{{ item.description }}</div>
@@ -91,7 +91,7 @@ const menuData = ref(menuDataJson);
     .content__block-article {
       display: flex;
       flex-direction: column;
-      gap: 20px;
+      margin-bottom: 8px;
     }
 
     .content__item {
