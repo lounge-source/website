@@ -2,19 +2,19 @@
 const hookahs = [
   {
     name: 'Standard',
-    price: '1000 р'
+    price: '1000 ₽'
   },
  {
     name: 'Premium Hard',
-    price: '1200 р'
+    price: '1200 ₽'
   },
  {
     name: 'Второй кальян',
-    price: '900 р'
+    price: '900 ₽'
   },
   {
     name: 'Дневной кальян',
-    price: '750 р'
+    price: '750 ₽'
   },
 ]
 
@@ -162,5 +162,36 @@ const hookahsRules = [
 
 .hookah__item-price {
   text-align: end;
+}
+
+@media (max-width:768px) {
+  .hookah-menu__title {
+    font-size: 30px;
+    margin: 50px 0 20px;
+  }
+
+  .hookah__item-title {
+    font-size: 12px;
+  }
+
+  .hookah__item-dots {
+    height: 12px;
+  }
+
+  .hookah-menu__item-detail {
+    font-size: 20px;
+  }
+
+  .hookah-menu__item-info {
+    font-size: 12px;
+  }
+
+  .hookah-menu__miscellaneous-container {
+    .hookah-menu__item {
+      padding: 6px;
+    }
+  }
+
+
 }
 </style>

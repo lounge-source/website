@@ -24,7 +24,7 @@
     </div>
 
     <div class="rules__section rules__section--corkage">
-      <p class="rules__text">*Пробковый сбор: <span class="rules__highlight">250 р</span></p>
+      <p class="rules__text">*Пробковый сбор: <span class="rules__highlight">250 ₽</span></p>
       <p class="rules__text">**Питьевые и безалкогольные напитки приносить запрещено.</p>
     </div>
   </div>
@@ -34,39 +34,39 @@
 const rules = [
   {
     name: 'Бой посуды',
-    price: 'от 200 до 1500 р'
+    price: 'от 200 до 1500 ₽'
   },
   {
     name: 'Диван',
-    price: 'от 5000 до 15000 р'
+    price: 'от 5000 до 15000 ₽'
   },
   {
     name: 'Кресло',
-    price: 'от 8000 до 10000 р'
+    price: 'от 8000 до 10000 ₽'
   },
     {
     name: 'PS4, PS5',
-    price: 'от 8000 до 70000 р'
+    price: 'от 8000 до 70000 ₽'
   },
   {
     name: 'Джойстики',
-    price: '8000 р'
+    price: '8000 ₽'
   },
   {
     name: 'Телевизор',
-    price: 'от 30000 до 55000 р'
+    price: 'от 30000 до 55000 ₽'
   },
   {
     name: 'Чаша',
-    price: 'от 400 до 1000 р'
+    price: 'от 400 до 1000 ₽'
   },
   {
     name: 'Колба',
-    price: 'от 1000 до 20000 р'
+    price: 'от 1000 до 20000 ₽'
   },
   {
     name: 'Шахта',
-    price: 'от 5000 р'
+    price: 'от 5000 ₽'
   },
 
 ];
@@ -139,5 +139,20 @@ const rules = [
 
 .rules__section--corkage {
   margin-top: 20px;
+}
+
+@media (max-width:768px) {
+  .rules__subtitle, .rules__title {
+    font-size: 30px;
+    margin: 50px 0 20px
+  }
+
+  .rules__item-title {
+    font-size: 12px;
+  }
+
+  .rules__item-dots {
+    height: 12px;
+  }
 }
 </style>

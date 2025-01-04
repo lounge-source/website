@@ -100,6 +100,10 @@ const menuData = ref(menuDataJson);
       align-items: start;
     }
 
+    @media (max-width:768px) {
+      grid-template-columns: max-content 1fr 40px 40px;
+    }
+
     .content__item-title {
       font-size: 14px;
       line-height: 120%;
@@ -127,6 +131,10 @@ const menuData = ref(menuDataJson);
       text-align: end;
     }
 
+    .content__item-size {
+      opacity: 0.5;
+    }
+
     .content__item-description {
       color: #9e6850;
       margin-top: 8px;
@@ -145,6 +153,37 @@ const menuData = ref(menuDataJson);
       .two-columns {
         grid-template-columns: 1fr 1fr;
       }
+    }
+  }
+
+  @media (max-width:768px) {
+    .menu__header {
+      font-size: 30px;
+    }
+
+    .menu__content {
+      margin-top: 40px;
+
+      .content__header {
+        font-size: 30px;
+        margin-bottom: 40px;
+      }
+
+      .content__item-title {
+        font-size: 12px;
+      }
+
+      .content__item-dots {
+        height: 12px;
+      }
+
+      .content__item {
+        grid-template-columns: max-content 1fr 40px 40px;
+      }
+    }
+    .menu__note {
+      font-size: 10px;
+      margin-top: 30px;
     }
   }
 }

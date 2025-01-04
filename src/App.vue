@@ -24,4 +24,11 @@ import TheHookahMenu from "@/components/TheHookahMenu.vue";
   padding: 30px 150px 80px;
 }
 
+@media (max-width:768px) {
+  .wrapper {
+    padding: 20px;
+    font-size: 12px;
+  }
+}
+
 </style>
