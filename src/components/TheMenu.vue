@@ -1,57 +1,65 @@
 <script setup>
+import { ref, onMounted } from 'vue';
 
+const menuData = ref([]);
+
+onMounted(async () => {
+  try {
+    const response = await fetch('./data.json');
+    if (response.ok) {
+      menuData.value = await response.json();
+    } else {
+      console.error('Ошибка загрузки данных:', response.statusText);
+    }
+  } catch (error) {
+    console.error('Ошибка загрузки данных:', error);
+  }
+});
 </script>
 
 <template>
-<div class="menu">
-  <h1>
-    <span  class="menu__header">
-      МЕНЮ
-    </span>
-  </h1>
-  <div class="menu__note">*Количество представленных позиций могут отличаться</div>
-
-  <div class="menu__content">
-    <div class="content__header">Классика</div>
-    <div class="content__block">
-      <div class="content__block-article">
-        <div>
-          <div class="content__item">
-            <p class="content__item-title">Классическая чаша</p>
-            <div class="content__item-dots"></div>
-            <p class="content__item-price">3 500 ₽</p>
+  <div class="container">
+    <div class="menu">
+      <h1>
+        <span class="menu__header">
+          МЕНЮ
+        </span>
+      </h1>
+      <div class="menu__note">*Количество представленных позиций могут отличаться</div>
+      <div class="menu__container">
+        <div v-for="(section, index) in menuData.menu" :key="index" class="menu__content">
+          <div class="content__header">{{ section.category }}</div>
+          <div class="two-columns">
+            <div v-for="(item, idx) in section.items" :key="idx" class="content__block">
+              <div class="content__block-article">
+                <div>
+                  <div class="content__item">
+                    <p class="content__item-title">{{ item.name }}</p>
+                    <div class="content__item-dots"></div>
+                    <p class="content__item-price">{{ item.price }} ₽</p>
+                  </div>
+                  <div class="content__item-description">{{ item.description }}</div>
+                </div>
+              </div>
+            </div>
           </div>
-          <div class="content__item-description">Добавка сигарных табаков WTO | Bonche | Dogma | Kraken | Satyr Brilliant</div>
-        </div>
-        <div>
-          <div class="content__item">
-            <p class="content__item-title">Классическая чаша</p>
-            <div class="content__item-dots"></div>
-            <p class="content__item-price">3 500 ₽</p>
-          </div>
-          <div class="content__item-description">Добавка сигарных табаков WTO | Bonche | Dogma | Kraken | Satyr Brilliant</div>
-        </div>
-      </div>
-      <div>
-        <div>
-          <div class="content__item">
-            <p class="content__item-title">Классическая чаша</p>
-            <div class="content__item-dots"></div>
-            <p class="content__item-price">3 500 ₽</p>
-          </div>
-          <div class="content__item-description">Добавка сигарных табаков WTO | Bonche | Dogma | Kraken | Satyr Brilliant</div>
         </div>
       </div>
     </div>
   </div>
-</div>
 </template>
 
 <style scoped>
+/* Контейнер с поддержкой контейнерных запросов */
+.container {
+  container-type: inline-size;
+}
+
+/* Базовая стилизация меню */
 .menu {
   width: 100%;
-  height: 100vh;
-  background: url("src/assets/images/background.png");
+  min-height: 100vh;
+  background: url("src/assets/images/background.png") repeat;
   font-family: "Roboto", serif;
   color: #d9d1c9;
   font-weight: 100;
@@ -92,12 +100,21 @@
       margin-bottom: 60px;
     }
 
+    .two-columns {
+      display: grid;
+      gap: 8px;
+      grid-template-columns: 1fr; /* Одна колонка по умолчанию */
+    }
+
+    .content__block-article {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+    }
+
     .content__item {
-      display: grid
-    ;
-      grid-template-columns: -webkit-max-content 1fr -webkit-max-content -webkit-max-content;
-      grid-template-columns: max-content 1fr max-content max-content;
-      width: 100%;
+      display: grid;
+      grid-template-columns: max-content 1fr max-content;
       align-items: start;
     }
 
@@ -114,28 +131,17 @@
       line-height: 150%;
     }
 
-    .content__item-price {
-
-    }
-
-    .content__block {
-      display: grid;
-      grid-template-columns: repeat(2, 1fr);
-      grid-column-gap: 170px;
-      -moz-column-gap: 170px;
-      column-gap: 170px;
-    }
-
-    .content__block-article {
-      display: flex;
-      flex-direction: column;
-      gap: 20px;
-    }
-
     .content__item-description {
       color: #9e6850;
       margin-top: 8px;
     }
+  }
+}
+
+/* Контейнерные запросы */
+@container (width > 500px) {
+  .two-columns {
+    grid-template-columns: 1fr 1fr; /* Две колонки при ширине > 500px */
   }
 }
 </style>
