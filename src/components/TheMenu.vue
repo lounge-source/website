@@ -5,7 +5,7 @@ const menuData = ref([]);
 
 onMounted(async () => {
   try {
-    const response = await fetch('./data.json');
+    const response = await fetch('public/data.json');
     if (response.ok) {
       menuData.value = await response.json();
     } else {
