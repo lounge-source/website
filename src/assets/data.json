@@ -17,7 +17,7 @@
 	  "category": "Пиво",
 	  "items": [
 		{"name": "Козел", "size": "0.5", "price": 150},
-		{"name": "Крушовхица", "size": "0.5", "price": 150},
+		{"name": "Крушовица", "size": "0.5", "price": 150},
 		{"name": "Hoegaarden", "size": "0.5", "price": 200},
 		{"name": "Blanche", "size": "0.5", "price": 150},
 		{"name": "Corona Extra", "size": "0.5", "price": 150},
