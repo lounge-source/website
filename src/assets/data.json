@@ -3,57 +3,61 @@
 	{
 	  "category": "Напитки",
 	  "items": [
-		{"name": "Вода", "size": "0.5", "description": "с газом / без газа", "price": 100},
-		{"name": "Fanta/Cola/Sprite", "size": "0.5", "price": 180},
-		{"name": "Cola в стекле", "price": 0},
-		{"name": "Flesh", "price": 0},
-		{"name": "Burn/Adrenalin", "price": 0},
-		{"name": "Monster", "price": 0},
-		{"name": "Borjomi", "price": 0},
+		{"name": "Fanta/Cola/Sprite", "size": "0.5", "price": 280},
+		{"name": "Cola в стекле", "size": "0.5", "price": 280},
+		{"name": "Flesh", "size": "0.5", "price": 280},
+		{"name": "Burn/Adrenalin", "size": "0.5", "price": 280},
+		{"name": "Monster", "size": "0.5", "price": 280},
+		{"name": "Borjomi", "price": 200, "size": "0.5"},
 		{"name": "Сидр", "size": "0.5", "price": 200},
-		{"name": "Пиво", "description": "Козел - 150 р, Крушовица - 150 р, Hoegaarden - 200 р, Blanche - 150 р, Corona Extra, Wolpertinger, Guinness, Крафт", "price": 150}
+		{"name": "Вода", "size": "0.5", "description": "с газом / без газа", "price": 200}
+	  ]
+	},
+	{
+	  "category": "Пиво",
+	  "items": [
+		{"name": "Козел", "size": "0.5", "price": 150},
+		{"name": "Крушовхица", "size": "0.5", "price": 150},
+		{"name": "Hoegaarden", "size": "0.5", "price": 200},
+		{"name": "Blanche", "size": "0.5", "price": 150},
+		{"name": "Corona Extra", "size": "0.5", "price": 150},
+		{"name": "Wolpertinger", "size": "0.5", "price": 150},
+		{"name": "Guinness", "size": "0.5", "price": 150},
+		{"name": "Крафт", "size": "0.5", "price": 150}
 	  ]
 	},
 	{
 	  "category": "Закуски",
 	  "items": [
-		{"name": "Lays", "size": "70гр", "description": "в ассортименте"},
-		{"name": "Lays", "size": "140гр", "description": "в ассортименте"},
-		{"name": "Фисташки"},
-		{"name": "Сыр косичка"},
-		{"name": "Арахис", "size": "250гр", "description": "в ассортименте"},
-		{"name": "Alpen Gold"},
-		{"name": "Шоколадные батончики", "description": "Mars / Nuts / Bounty / Snickers / Twix\n"}
+		{"name": "Lays", "size": "70гр", "description": "в ассортименте", "price": 120},
+		{"name": "Lays", "size": "140гр", "description": "в ассортименте", "price": 180},
+		{"name": "Фисташки", "size": "100гр", "price": 150},
+		{"name": "Сыр косичка", "size": "100гр", "price": 150},
+		{"name": "Alpen Gold", "price": 150},
+		{"name": "Шоколадные батончики", "price": 120, "description": "Mars / Nuts / Bounty / Snickers / Twix\n"}
 	  ]
 	},
 	{
 	  "category": "Чай",
 	  "items": [
-		{"name": "Сянь Сяо Цзе", "description": "Зеленая фея"},
-		{"name": "Пуэр 10 лет", "description": "Многолетний, дикорастущий"},
-		{"name": "Най Сян Цзинь Сюань", "description": "Молочный улун Китай Стандарт"},
-		{"name": "Габа Алишань", "description": "Сильная прожарка"},
-		{"name": "Улун Малина с травами"},
-		{"name": "Улун Медовая дыня-карамель"},
-		{"name": "Улун Лимончелло"},
-		{"name": "Черные чаи", "size": "900мл", "description": "Ассам / Эрл Грей"},
-		{"name": "Фруктовые чаи", "size": "900мл", "description": "Бора-Бора / Нахальный фрукт"}
-	  ]
-	},
-	{
-	  "category": "Лимонады",
-	  "items": [
-		{"name": "Лайм-мята", "size": "400мл", "description": "лед,лайм, мята,сироп"},
-		{"name": "Клубничный", "size": "400мл", "description": "лед,клубника,мята,лимон,сироп"},
-		{"name": "Апельсиновый", "size": "400мл", "description": "лед,апельсин,мята сироп"}
+		{"name": "Сянь Сяо Цзе", "description": "Зеленая фея", "price": 299, "size": "900мл"},
+		{"name": "Пуэр 10 лет", "description": "Многолетний, дикорастущий", "price": 399, "size": "900мл"},
+		{"name": "Пуэр вишневый", "price": 499, "size": "900мл"},
+		{"name": "Най Сян Цзинь Сюань", "description": "Молочный улун Китай Стандарт", "price": 299, "size": "900мл"},
+		{"name": "Габа Алишань", "description": "Сильная прожарка", "price": 399, "size": "900мл"},
+		{"name": "Улун Малина с травами", "price": 299, "size": "900мл"},
+		{"name": "Улун Медовая дыня-карамель", "price": 299, "size": "900мл"},
+		{"name": "Улун Лимончелло", "price": 299, "size": "900мл"},
+		{"name": "Черные чаи", "size": "900мл", "description": "Ассам / Эрл Грей", "price": 299},
+		{"name": "Фруктовые чаи", "size": "900мл", "description": "Бора-Бора / Нахальный фрукт", "price": 299}
 	  ]
 	},
 	{
 	  "category": "Молочные коктейли",
 	  "items": [
-		{"name": "Ванильный", "size": "400мл", "description": "молоко, мороженое, взбитые сливки"},
-		{"name": "Клубничный", "size": "400мл", "description": "молоко,топпинг,взбитые сливки"},
-		{"name": "Шоколадный", "size": "400мл", "description": "молоко,топпинг,взбитые сливки"}
+		{"name": "Ванильный", "size": "400мл", "description": "молоко, мороженое, взбитые сливки", "price": 250},
+		{"name": "Клубничный", "size": "400мл", "description": "молоко,топпинг,взбитые сливки", "price": 250},
+		{"name": "Шоколадный", "size": "400мл", "description": "молоко,топпинг,взбитые сливки", "price": 250}
 	  ]
 	},
 	{
@@ -78,16 +82,16 @@
 		{"name": "Мокко-лесной орех", "price": 250, "size": "350мл"},
 		{"name": "Миндальный шейх", "price": 250, "size": "350мл"},
 		{"name": "Кокосовый остров", "price": 250, "size": "350мл"},
-		{"name": "Добавки", "price": 30, "description": "Сироп - 40 p / Молоко - 30 p / Сливки - 35 р / Взбитые сливки - 35 р"}
+		{"name": "Добавки", "price": 30, "description": "Сироп - 40₽ / Молоко - 30₽ / Сливки - 35₽ / Взбитые сливки - 35₽"}
 	  ]
 	},
 	{
-	  "category": "Наполнители",
+	  "category": "Лимонады",
 	  "items": [
-		{"name": "Манго-маракуйя", "price": 0},
-		{"name": "Клюква", "price": 0},
-		{"name": "Облепиха", "price": 0},
-		{"name": "Киви", "price": 0}
+		{"name": "Манго-маракуйя", "price": 280, "size": "350мл"},
+		{"name": "Клюква", "price": 280, "size": "350мл"},
+		{"name": "Облепиха", "price": 280, "size": "350мл"},
+		{"name": "Киви", "price": 280, "size": "350мл"}
 	  ]
 	}
   ]

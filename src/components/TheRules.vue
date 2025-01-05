@@ -14,6 +14,22 @@
       </div>
     </div>
 
+
+
+    <div class="rules__section rules__section--damage">
+      <h3 class="rules__subtitle">*Пробковый сбор</h3>
+
+      <div class="rules__block">
+        <div v-for="(rake) in rakes" class="rules__block-article">
+          <div class="rules__item">
+            <p class="rules__item-title">{{ rake.name }}</p>
+            <div class="rules__item-dots"></div>
+            <p class="rules__item-price">{{ rake.price }}</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
     <div class="rules__section rules__section--casual">
       <h2 class="rules__title">Правила заведения</h2>
       <p class="rules__text">В заведение допускаются лица, достигшие 18+ при предъявлении удостоверения личности.</p>
@@ -24,7 +40,6 @@
     </div>
 
     <div class="rules__section rules__section--corkage">
-      <p class="rules__text">*Пробковый сбор: <span class="rules__highlight">250 ₽</span></p>
       <p class="rules__text">**Питьевые и безалкогольные напитки приносить запрещено.</p>
     </div>
   </div>
@@ -70,6 +85,30 @@ const rules = [
   },
 
 ];
+
+const rakes = [
+  {
+    name: 'Крепкий алкоголь 0.5',
+    price: '200 ₽'
+  },
+   {
+    name: 'Крепкий алкоголь 0..7',
+    price: '300 ₽'
+  },
+   {
+    name: 'Водка 0.5',
+    price: '400 ₽'
+  },
+   {
+    name: 'Водка 0.7',
+    price: '600 ₽'
+  },
+   {
+    name: 'Пиво 1л',
+    price: '50 ₽'
+  },
+
+]
 </script>
 
 <style scoped>

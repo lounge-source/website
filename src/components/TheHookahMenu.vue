@@ -2,19 +2,19 @@
 const hookahs = [
   {
     name: 'Standard',
-    price: '1000 ₽'
+    price: '950 ₽'
   },
  {
     name: 'Premium Hard',
-    price: '1200 ₽'
+    price: '1350 ₽'
   },
  {
     name: 'Второй кальян',
-    price: '900 ₽'
+    price: '850 ₽'
   },
   {
     name: 'Дневной кальян',
-    price: '750 ₽'
+    price: '650 ₽'
   },
 ]
 
